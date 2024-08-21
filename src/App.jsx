@@ -1,13 +1,24 @@
+import PropTypes from 'prop-types';
+
 const Header = (props) => {
   return (
     <h1>{props.course}</h1>
   )
 }
 
+Header.propTypes = {
+  course: PropTypes.string
+}
+
 const Part = (props) => {
   return (
     <p>{props.part} - {props.exercises} excercises</p>
   )
+}
+
+Part.propTypes = {
+  part: PropTypes.string,
+  exercises: PropTypes.number,
 }
 
 const Content = (props) => {
@@ -20,10 +31,18 @@ const Content = (props) => {
   )
 }
 
+Content.propTypes = {
+  parts: PropTypes.array,
+}
+
 const Total = (props) => {
   return (
     <p>Total excercises = {props.total}</p>
   )
+}
+
+Total.propTypes = {
+  total: PropTypes.number
 }
 
 const App = () => {
