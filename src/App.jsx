@@ -1,16 +1,7 @@
-import PropTypes from 'prop-types';
 import Header from './Components/Header'
 import Content from './Components/Content'
+import Total from './Components/Total'
 
-const Total = (props) => {
-  return (
-    <p>Total excercises = {props.total}</p>
-  )
-}
-
-Total.propTypes = {
-  total: PropTypes.number
-}
 
 const App = () => {
 const course = 'Half Stack application development'
